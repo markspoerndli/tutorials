@@ -160,9 +160,7 @@ public class LockByKeyUnitTest {
 
         //if locking worked correctly, each counter should have been incremented <numIncrements> times
         counters.forEach(counterValue -> assertEquals(threadCount * numIncrements, counterValue));
+        assertEquals(0, LockByKey.getNumberOfActiveLocks());
     }
-
-
-
 
 }
